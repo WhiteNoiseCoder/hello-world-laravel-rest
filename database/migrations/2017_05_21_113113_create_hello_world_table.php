@@ -16,6 +16,8 @@ class CreateHelloWorldTable extends Migration
         Schema::create('hello_world', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string("hello");
+            $table->string("world");
         });
     }
 
