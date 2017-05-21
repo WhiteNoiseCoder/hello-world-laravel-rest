@@ -15,10 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('helloworld', 'HelloWorldController');
-
 Route::group(['prefix' => 'api'], function()
 {
     Route::resource('authenticate', 'AuthenticateController', ['only' => ['index']]);
     Route::post('authenticate', 'AuthenticateController@authenticate');
+    Route::resource('helloworld', 'HelloWorldController');
 });
